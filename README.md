@@ -1,6 +1,6 @@
 # routing
 
-A new Flutter project.
+this is routing project, navigating from one screen to another screen in better way
 
 ## Getting Started
 
