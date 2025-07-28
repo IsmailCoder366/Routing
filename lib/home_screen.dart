@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:routing/screen_two.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -32,20 +33,25 @@ class _HomeScreenState extends State<HomeScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Container(
-            height: 50,
-            width: double.infinity,
-            decoration: BoxDecoration(
-              color: Colors.green,
-              borderRadius: BorderRadius.circular(8),
-            ),
-            child: const Center(
-              child: Text(
-                'Home Screen',
-                style: TextStyle(color: Colors.white, fontSize: 20),
+          InkWell(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => ScreenTwo()));
+            },
+            child: Container(
+              height: 50,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                color: Colors.green,
+                borderRadius: BorderRadius.circular(8),
               ),
-            ),
-          ).p16()
+              child: const Center(
+                child: Text(
+                  'Home Screen',
+                  style: TextStyle(color: Colors.white, fontSize: 20),
+                ),
+              ),
+            ).p16(),
+          )
         ],
       ),
     );
