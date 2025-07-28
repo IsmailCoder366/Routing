@@ -29,13 +29,22 @@ class _HomeScreenState extends State<HomeScreen> {
 
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
             height: 50,
             width: double.infinity,
             decoration: BoxDecoration(
               color: Colors.green,
-            )
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: const Center(
+              child: Text(
+                'Home Screen',
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
+            ),
           ).p16()
         ],
       ),
