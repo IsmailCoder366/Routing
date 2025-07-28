@@ -26,7 +26,8 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Routing'),
+        title: Text('Screen One'),
+        centerTitle: true,
 
       ),
       body: Column(
@@ -35,7 +36,10 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           InkWell(
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => ScreenTwo()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => ScreenTwo(
+                title: "Screen Two",
+                num: 2,
+              )));
             },
             child: Container(
               height: 50,
@@ -46,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               child: const Center(
                 child: Text(
-                  'Home Screen',
+                  'Screen 1',
                   style: TextStyle(color: Colors.white, fontSize: 20),
                 ),
               ),
