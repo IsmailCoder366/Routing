@@ -3,10 +3,10 @@ import 'package:routing/home_screen.dart';
 import 'package:routing/screen_three.dart';
 import 'package:routing/screen_two.dart';
 
-void main() => runApp(const HeroApp());
+void main() => runApp(const MyApp());
 
-class HeroApp extends StatelessWidget {
-  const HeroApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
