@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:routing/screen_two.dart';
 
 class HomeScreen extends StatefulWidget {
+static const String routeName = '/';
+  
+
+
   const HomeScreen({super.key});
 
   @override
@@ -30,34 +34,19 @@ class _HomeScreenState extends State<HomeScreen> {
         centerTitle: true,
 
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          InkWell(
-            onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => ScreenTwo(
-                title: "Screen Two",
-                num: 2,
-              )));
-            },
-            child: Container(
-              height: 50,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: Colors.green,
-                borderRadius: BorderRadius.circular(8),
-              ),
-              child: const Center(
-                child: Text(
-                  'Screen 1',
-                  style: TextStyle(color: Colors.white, fontSize: 20),
-                ),
-              ),
-            ).p16(),
-          )
-        ],
-      ),
+      body: GestureDetector(
+        onTap: () {
+          Navigator.pushNamed(context, '/screenTwo');
+        },
+        child: Hero(
+          tag: 'imageHero',
+
+          child: Image(
+            height: 200,
+              width: 200,
+              image: NetworkImage('https://plus.unsplash.com/premium_photo-1753080951637-ffbdee3c44c9?q=80&w=1412&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')),
+        ),
+      )
     );
   }
 }

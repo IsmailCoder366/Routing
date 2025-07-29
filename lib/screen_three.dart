@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:routing/home_screen.dart';
 
 class ScreenThree extends StatefulWidget {
+
+
+static const String routeName = '/screenThree';
+
   const ScreenThree({super.key});
 
   @override

@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:routing/home_screen.dart';
+import 'package:routing/screen_three.dart';
+import 'package:routing/screen_two.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(const HeroApp());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class HeroApp extends StatelessWidget {
+  const HeroApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return  MaterialApp(title: 'Transition Demo',
+    initialRoute: '/',
+      routes: {
+        '/': (context) =>  HomeScreen(),
+        '/screenTwo': (context) => ScreenTwo(),
+        '/screenThree': (context) => ScreenThree(),
+      },
 
-      home: const HomeScreen(),
     );
   }
 }
-
